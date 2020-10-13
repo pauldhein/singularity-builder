@@ -18,7 +18,7 @@ RUN rm go$VERSION.$OS-$ARCH.tar.gz
 RUN echo 'export PATH=/usr/local/go/bin:$PATH' >> ~/.bashrc
 RUN /bin/bash -c "source ~/.bashrc"
 ENV PATH=/usr/local/go/bin:$PATH
-ARG SING_VERSION=3.4.0
+ARG SING_VERSION=3.6.3
 
 WORKDIR /
 RUN wget https://github.com/sylabs/singularity/releases/download/v${SING_VERSION}/singularity-${SING_VERSION}.tar.gz
