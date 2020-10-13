@@ -25,3 +25,5 @@ RUN wget https://github.com/sylabs/singularity/releases/download/v${SING_VERSION
 RUN tar -xzf singularity-${SING_VERSION}.tar.gz
 WORKDIR /singularity
 RUN ./mconfig && make -C builddir && make -C builddir install
+RUN mkdir -p /tmp/sing-files/
+WORKDIR /tmp/sing-files
